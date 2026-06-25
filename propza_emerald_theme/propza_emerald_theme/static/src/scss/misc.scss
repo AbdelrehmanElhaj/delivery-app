@@ -1,0 +1,149 @@
+// ============================================================
+//  misc.scss — Dashboard, Pivot, Calendar, Settings,
+//              Dropdowns, Modals, Alerts, Chatter
+// ============================================================
+
+// ── Dashboard / Action manager ─────────────────────────────
+.o_action_manager {
+    .o_dashboard .o_stats .o_stat_info .o_stat_value {
+        color: $em-600 !important;
+    }
+}
+
+// ── Pivot View ─────────────────────────────────────────────
+.o_pivot_view {
+    .o_pivot_header_cell_opened,
+    .o_pivot_header_cell_closed {
+        color: $em-600 !important;
+        &:hover { background-color: $em-50 !important; }
+    }
+
+    .o_pivot_cell_value { color: $em-800 !important; }
+
+    thead th {
+        background-color: $em-50 !important;
+        color:            $em-800 !important;
+    }
+}
+
+// ── Calendar View ──────────────────────────────────────────
+.o_calendar_view {
+    .fc-toolbar .fc-button-primary {
+        background-color: $em-600 !important;
+        border-color:     $em-700 !important;
+        &:hover   { background-color: $em-800 !important; }
+        &:active  { background-color: $em-900 !important; }
+    }
+
+    .fc-event {
+        background-color: $em-400 !important;
+        border-color:     $em-600 !important;
+        color:            #ffffff !important;
+    }
+
+    .o_calendar_today { background-color: $em-50 !important; }
+
+    .fc-day-today { background-color: $em-50 !important; }
+}
+
+// ── Activity View ──────────────────────────────────────────
+.o_activity_view .o_activity_btn:hover,
+.o_activity_view .o_activity_color_success {
+    color: $em-600 !important;
+}
+
+// ── Dropdown menus ─────────────────────────────────────────
+.dropdown-menu {
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: $em-50 !important;
+        color:            $em-800 !important;
+    }
+
+    .dropdown-item.active {
+        background-color: $em-100 !important;
+        color:            $em-800 !important;
+    }
+}
+
+// ── Modals ─────────────────────────────────────────────────
+.modal {
+    .modal-header {
+        background-color: $em-50 !important;
+        border-bottom:    1px solid $em-border !important;
+
+        .modal-title { color: $em-800 !important; }
+    }
+
+    .modal-footer .btn-primary {
+        background-color: $em-600 !important;
+        border-color:     $em-700 !important;
+        &:hover { background-color: $em-800 !important; }
+    }
+}
+
+// ── Alerts ─────────────────────────────────────────────────
+.alert-success {
+    background-color: $em-50    !important;
+    border-color:     $em-border !important;
+    color:            $em-800   !important;
+}
+
+.alert-info {
+    background-color: #E6F1FB !important;
+    border-color:     #85B7EB !important;
+    color:            #0C447C !important;
+}
+
+// ── Progress bars (كل أنواع الـ progress) ─────────────────
+.progress-bar,
+.o_progressbar .o_progressbar_value {
+    background-color: $em-600 !important;
+}
+
+// ── Chatter / Messages ─────────────────────────────────────
+.o_Chatter,
+.o_chatter {
+    .o_Mail_thread .o_Message_bubble {
+        border-left: 3px solid $em-400 !important;
+    }
+
+    .o_thread_composer .btn-primary {
+        background-color: $em-600 !important;
+        border-color:     $em-700 !important;
+        &:hover { background-color: $em-800 !important; }
+    }
+
+    // Activity icon colors
+    .o_mail_activity_type_icon {
+        color: $em-600 !important;
+    }
+}
+
+// ── Settings page ──────────────────────────────────────────
+.o_settings_container {
+    .o_settings_section_icon i { color: $em-600 !important; }
+
+    .o_setting_box:hover {
+        border-color: $em-border !important;
+        box-shadow:   0 1px 6px rgba($em-600, 0.1) !important;
+    }
+}
+
+// ── Global text utilities ──────────────────────────────────
+.text-primary   { color: $em-600    !important; }
+.text-success   { color: $em-600    !important; }
+.bg-primary     { background-color: $em-600 !important; }
+.bg-success     { background-color: $em-600 !important; }
+.border-primary { border-color:     $em-border !important; }
+.border-success { border-color:     $em-border !important; }
+
+// ── Scrollbar (Webkit) ─────────────────────────────────────
+::-webkit-scrollbar-thumb {
+    background-color: $em-200 !important;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $em-400 !important;
+}

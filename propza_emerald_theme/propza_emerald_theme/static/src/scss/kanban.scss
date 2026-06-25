@@ -1,0 +1,97 @@
+// ============================================================
+//  kanban.scss — Kanban View, Cards, Column Headers
+// ============================================================
+
+// ── Column header ──────────────────────────────────────────
+.o_kanban_view {
+    .o_kanban_header > .o_kanban_header_title {
+        color:       $em-800 !important;
+        font-weight: 500;
+        border-bottom: 2px solid $em-border !important;
+    }
+
+    // لون العدد في رأس العمود
+    .o_kanban_header .o_kanban_counter {
+        color: $em-600 !important;
+    }
+
+    // ── Card base ─────────────────────────────────────────
+    .o_kanban_record {
+        transition: border-color 0.15s, box-shadow 0.15s;
+
+        &:hover {
+            border-color: $em-border !important;
+            box-shadow:   0 2px 10px rgba($em-600, 0.12) !important;
+        }
+
+        // اسم المالك / العنوان في البطاقة
+        .o_kanban_record_title,
+        .o_field_widget .o_form_uri,
+        strong {
+            color: $em-800 !important;
+        }
+
+        // Label "مالك عقار"
+        .o_kanban_record_subtitle,
+        .oe_kanban_details li span {
+            color: $em-600 !important;
+        }
+    }
+
+    // ── Ghost card (Add) ──────────────────────────────────
+    .o_kanban_ghost {
+        border: 1px dashed $em-border !important;
+    }
+
+    // ── Quick create ──────────────────────────────────────
+    .o_kanban_quick_create {
+        border:     1px solid $em-border !important;
+        box-shadow: 0 2px 8px rgba($em-600, 0.1) !important;
+
+        .o_kanban_add {
+            background-color: $em-600 !important;
+            border-color:     $em-700 !important;
+            color:            #ffffff !important;
+            &:hover { background-color: $em-800 !important; }
+        }
+    }
+
+    // ── Fold/Unfold column button ─────────────────────────
+    .o_column_quick_create .o_kanban_add_column {
+        color: $em-600 !important;
+        border: 1px dashed $em-border !important;
+        &:hover {
+            background-color: $em-50 !important;
+            color:            $em-800 !important;
+        }
+    }
+}
+
+// ── Kanban مالكين — بطاقات الإيرادات ──────────────────────
+// اللون الأزرق للأرقام الكبيرة → أخضر
+.o_kanban_record .o_stat_info .o_stat_value,
+.o_kanban_record .o_stat_info .o_stat_text {
+    color: $em-600 !important;
+}
+
+// زر Excel في البطاقة
+.o_kanban_record .btn-success,
+.o_kanban_record .o_kanban_action_button {
+    background-color: $em-600 !important;
+    border-color:     $em-700 !important;
+    color:            #ffffff !important;
+
+    &:hover { background-color: $em-800 !important; }
+}
+
+// Badges "سارية" / "مؤجرة" / "شاغرة"
+.o_kanban_record .badge.bg-success,
+.o_kanban_record .badge.text-bg-success,
+.o_kanban_record .o_priority .o_priority_star {
+    background-color: $em-50  !important;
+    color:            $em-800 !important;
+    border:           1px solid $em-border !important;
+}
+
+// ── Activity dots ──────────────────────────────────────────
+.o_kanban_record .o_activity_btn:hover { color: $em-600 !important; }
